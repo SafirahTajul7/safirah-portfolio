@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bone text-cafe dark:bg-darkbg dark:text-bone transition-colors duration-500 font-sans;
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif;
+}
+
+::selection {
+  background: #889063;
+  color: #fff;
+}
+
+.section-pad {
+  @apply px-6 md:px-12 lg:px-24 py-20 md:py-28;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-kombu text-bone px-6 py-3 rounded-full text-sm tracking-wide uppercase hover:bg-moss transition-colors duration-300;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 border border-cafe/40 dark:border-bone/30 px-6 py-3 rounded-full text-sm tracking-wide uppercase hover:border-moss hover:text-moss transition-colors duration-300;
+}
+
+.tag-badge {
+  @apply text-xs uppercase tracking-wider px-3 py-1 rounded-full bg-tan/60 text-cafe dark:bg-darkcard dark:text-bone;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #889063; border-radius: 4px; }

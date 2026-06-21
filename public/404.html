@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Single Page App GitHub Pages redirect.
+      // Preserves the path so React Router can pick it up after reload.
+      var segmentCount = 1; // matches the repo name segment in basename
+      var l = window.location;
+      var path = l.pathname.split('/').slice(1 + segmentCount).join('/');
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' + path +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
