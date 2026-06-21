@@ -1,9 +1,9 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const SERVICE_ID = "service_jxja3pe";
-const TEMPLATE_ID = "template_ub2cw0p";
-const PUBLIC_KEY = "cg8wbd3K8D5Tv8nHX";
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
